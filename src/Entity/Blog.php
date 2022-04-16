@@ -53,6 +53,9 @@ class Blog
         return $this->id;
     }
 
+
+
+
     public function getTitre(): ?string
     {
         return $this->titre;
