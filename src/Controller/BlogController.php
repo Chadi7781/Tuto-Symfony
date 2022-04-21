@@ -11,6 +11,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BlogController extends AbstractController
 {
+
+
+    //***********************************Admin start***********************************************************//
     /**
      * @Route("/", name="display_blog")
      */
@@ -98,6 +101,21 @@ class BlogController extends AbstractController
 
     }
 
+    //***********************************Admin End***********************************************************//
+
+
+
+    //***********************************Client Start***********************************************************//
+    /**
+     * @Route("/client", name="display_client")
+     */
+    public function indexClient(): Response
+    {
+
+        return $this->render('Client/index.html.twig');
+    }
+
+    //***********************************Client End***********************************************************//
 
 
 }
