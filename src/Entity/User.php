@@ -38,6 +38,12 @@ class User implements UserInterface
      */
     private $password;
 
+
+    /**
+     * @ORM\Column(type="string", length=180, )
+     */
+    private $reset_token;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -54,6 +60,9 @@ class User implements UserInterface
 
         return $this;
     }
+
+
+
 
     /**
      * A visual identifier that represents this user.
@@ -134,6 +143,25 @@ class User implements UserInterface
     {
         $this->name = $name;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getResetToken()
+    {
+        return $this->reset_token;
+    }
+
+    /**
+     * @param mixed $reset_token
+     */
+    public function setResetToken($reset_token): void
+    {
+        $this->reset_token = $reset_token;
+    }
+
+
+
 
 
 }
